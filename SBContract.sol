@@ -868,15 +868,11 @@ contract SBToken is BEP20{
     {
         _mint(
             _msgSender(),
-            120000000000000000000000000
+            100000000000000000000000000
         );
     }
 
-    /// @notice Creates `_amount` token to `_to`. Must only be called by the owner.
-    function mint(address _to, uint256 _amount) public onlyOwner {
-        _mint(_to, _amount);
-        
-    }
+    
     // burn token from msg sender
     function burn(uint256 _amount) public {
         _burn(_msgSender(), _amount);
